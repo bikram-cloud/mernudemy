@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const connectDB = require("./config/db");
 
@@ -8,8 +9,6 @@ connectDB();
 
 // Init Middleware
 app.use(express.json({ extended: false }));
-
-app.get("/api/abc", (req, res) => res.send("Api Running"));
 
 // Define Routes
 app.use("/api/users", require("./routes/api/users"));
