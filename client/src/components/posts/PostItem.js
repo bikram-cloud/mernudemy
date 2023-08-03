@@ -1,9 +1,9 @@
-import React, { Fragment } from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import Moment from "react-moment";
-import { connect } from "react-redux";
-import { addLike, removeLike, deletePost } from "../../actions/post";
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import Moment from 'react-moment';
+import { connect } from 'react-redux';
+import { addLike, removeLike, deletePost } from '../../actions/post';
 
 const PostItem = ({
   addLike,
@@ -30,20 +30,18 @@ const PostItem = ({
           <button
             onClick={e => addLike(_id)}
             type="button"
-            className="btn btn-light"
-          >
-            <i className="fas fa-thumbs-up" />{" "}
+            className="btn btn-light">
+            <i className="fas fa-thumbs-up" />{' '}
             <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
           </button>
           <button
             onClick={e => removeLike(_id)}
             type="button"
-            className="btn btn-light"
-          >
+            className="btn btn-light">
             <i className="fas fa-thumbs-down" />
           </button>
           <Link to={`/posts/${_id}`} className="btn btn-primary">
-            Discussion{" "}
+            Discussion{' '}
             {comments.length > 0 && (
               <span className="comment-count">{comments.length}</span>
             )}
@@ -52,8 +50,7 @@ const PostItem = ({
             <button
               onClick={e => deletePost(_id)}
               type="button"
-              className="btn btn-danger"
-            >
+              className="btn btn-danger">
               <i className="fas fa-times" />
             </button>
           )}

@@ -1,8 +1,8 @@
-import React, { Fragment, useState, useEffect } from "react";
-import { Link, withRouter } from "react-router-dom";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { createProfile, getCurrentProfile } from "../../actions/profile";
+import React, { Fragment, useState, useEffect } from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { createProfile, getCurrentProfile } from '../../actions/profile';
 
 const EditProfile = ({
   profile: { profile, loading },
@@ -11,18 +11,18 @@ const EditProfile = ({
   history,
 }) => {
   const [formData, setFormData] = useState({
-    company: "",
-    website: "",
-    location: "",
-    status: "",
-    skills: "",
-    githubusername: "",
-    bio: "",
-    twitter: "",
-    facebook: "",
-    linkedin: "",
-    youtube: "",
-    instagram: "",
+    company: '',
+    website: '',
+    location: '',
+    status: '',
+    skills: '',
+    githubusername: '',
+    bio: '',
+    twitter: '',
+    facebook: '',
+    linkedin: '',
+    youtube: '',
+    instagram: '',
   });
 
   const [displaySocialInputs, toggleSocialInputs] = useState(false);
@@ -31,19 +31,19 @@ const EditProfile = ({
     getCurrentProfile();
 
     setFormData({
-      company: loading || !profile.company ? "" : profile.company,
-      website: loading || !profile.website ? "" : profile.website,
-      location: loading || !profile.location ? "" : profile.location,
-      status: loading || !profile.status ? "" : profile.status,
-      skills: loading || !profile.skills ? "" : profile.skills.join(","),
+      company: loading || !profile.company ? '' : profile.company,
+      website: loading || !profile.website ? '' : profile.website,
+      location: loading || !profile.location ? '' : profile.location,
+      status: loading || !profile.status ? '' : profile.status,
+      skills: loading || !profile.skills ? '' : profile.skills.join(','),
       githubusername:
-        loading || !profile.githubusername ? "" : profile.githubusername,
-      bio: loading || !profile.bio ? "" : profile.bio,
-      twitter: loading || !profile.twitter ? "" : profile.twitter,
-      facebook: loading || !profile.facebook ? "" : profile.facebook,
-      linkedin: loading || !profile.linkedin ? "" : profile.linkedin,
-      youtube: loading || !profile.youtube ? "" : profile.youtube,
-      instagram: loading || !profile.instagram ? "" : profile.instagram,
+        loading || !profile.githubusername ? '' : profile.githubusername,
+      bio: loading || !profile.bio ? '' : profile.bio,
+      twitter: loading || !profile.twitter ? '' : profile.twitter,
+      facebook: loading || !profile.facebook ? '' : profile.facebook,
+      linkedin: loading || !profile.linkedin ? '' : profile.linkedin,
+      youtube: loading || !profile.youtube ? '' : profile.youtube,
+      instagram: loading || !profile.instagram ? '' : profile.instagram,
     });
   }, [loading, getCurrentProfile]);
 
@@ -167,8 +167,7 @@ const EditProfile = ({
             placeholder="A short bio of yourshelf"
             name="bio"
             value={bio}
-            onChange={e => onChange(e)}
-          ></textarea>
+            onChange={e => onChange(e)}></textarea>
           <small className="form-text">Tell us a little about yourshelf</small>
         </div>
 
@@ -176,8 +175,7 @@ const EditProfile = ({
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
             type="button"
-            className="btn btn-light"
-          >
+            className="btn btn-light">
             Add Social Network Links
           </button>
           <span>Optional</span>
@@ -239,7 +237,7 @@ const EditProfile = ({
         )}
 
         <input type="submit" className="btn btn-primary my-1" />
-        <Link Link className="btn btn-light my-1" to="/dashboard">
+        <Link className="btn btn-light my-1" to="/dashboard">
           Go Back
         </Link>
       </form>
