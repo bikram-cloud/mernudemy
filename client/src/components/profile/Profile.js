@@ -1,14 +1,14 @@
-import React, { Fragment, useEffect } from "react";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import ProfileTop from "./ProfileTop";
-import ProfileAbout from "./ProfileAbout";
-import ProfileExprience from "./ProfileExprience";
-import ProfileEducation from "./ProfileEducation";
-import ProfileGithub from "./ProfileGithub";
-import Spinner from "../layout/Spinner";
-import { getProfileById } from "../../actions/profile";
+import React, { Fragment, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import ProfileTop from './ProfileTop';
+import ProfileAbout from './ProfileAbout';
+import ProfileExprience from './ProfileExprience';
+import ProfileEducation from './ProfileEducation';
+import ProfileGithub from './ProfileGithub';
+import Spinner from '../layout/Spinner';
+import { getProfileById } from '../../actions/profile';
 
 const Profile = ({
   getProfileById,
@@ -83,7 +83,7 @@ const Profile = ({
 
 Profile.propTypes = {
   getProfileById: PropTypes.func.isRequired,
-  profile: PropTypes.object.isRequired,
+  profile: PropTypes.array.isRequired,
   auth: PropTypes.object.isRequired,
 };
 
