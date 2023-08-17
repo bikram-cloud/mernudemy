@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const ProfileTop = ({
   profile: {
@@ -35,8 +35,7 @@ const ProfileTop = ({
           <Link
             href={social.facebook}
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <i className="fab fa-facebook fa-2x" />
           </Link>
         )}
@@ -44,22 +43,20 @@ const ProfileTop = ({
           <Link
             href={social.linkedin}
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <i className="fab fa-linkedin fa-2x" />
           </Link>
         )}
         {social && social.youtube && (
           <Link herf={social.youtube} target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-youtube" fa-2x />
+            <i className="fab fa-youtube fa-2x" />
           </Link>
         )}
         {social && social.instagram && (
           <Link
             href={social.instagram}
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <i className="fab fa-instagram fa-2x" />
           </Link>
         )}

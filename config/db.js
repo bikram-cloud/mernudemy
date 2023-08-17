@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
-const config = require("config");
-const db = config.get("mongoURI");
+const mongoose = require('mongoose');
+const config = require('config');
+const db = config.get('mongoURI');
 
 const connectDB = async () => {
   try {
@@ -10,9 +10,10 @@ const connectDB = async () => {
       useCreateIndex: true,
       useFindAndModify: false,
     });
-    console.log("Mongodb is connecting...");
+    console.log('Mongodb is connecting...');
   } catch (err) {
     console.error(err.message);
+    console.log(`Not connect mongodb because ${err.message}`);
     process.exit(1);
   }
 };
