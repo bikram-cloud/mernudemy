@@ -1,8 +1,1 @@
-{
-  "mongoURI": "mongodb+srv://bikram:bikram12@cluster0.48teu6g.mongodb.net/",
-  "jwtSecret": "mysecrettoken",
-  "githubClientId": "883fb7e8d293c7e3acc3",
-  "githubSecret": "47d3f6336cfe44a17ee9ee271de4a1de2194eb33",
-  "NODE_ENV": "production",
-  "PORT": "9000"
-}
+
